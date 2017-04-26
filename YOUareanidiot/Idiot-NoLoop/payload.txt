@@ -1,0 +1,15 @@
+#Launches a youtube video in fullscreen of YouAreAnIdiot
+#Creator: Bry-fi
+
+LED R B G 500
+ATTACKMODE HID
+Q GUI r
+Q BACKSPACE
+Q DELAY 200
+Q STRING "https://www.youtube.com/embed/48rz8udZBmQ?autoplay=true&loop=1&playlist=48rz8udZBmQ"
+Q DELAY 200
+Q ENTER
+Q DELAY 200
+Q F11
+sync
+LED G
