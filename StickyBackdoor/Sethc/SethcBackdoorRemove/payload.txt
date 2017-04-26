@@ -1,0 +1,43 @@
+# Removes the backdoor to the system that is left open
+ATTACKMODE HID STORAGE
+LED B
+Q GUI r
+Q DELAY 2000
+Q STRING powershell Start-Process cmd -Verb runAs
+Q DELAY 2000
+Q ENTER
+Q DELAY 200
+Q ALT y
+Q DELAY 2000
+Q STRING color FE
+Q DELAY 200
+Q ENTER
+Q STRING mode con:cols=18 lines=1
+Q DELAY 200
+Q ENTER
+Q STRING e:
+Q DELAY 200
+Q ENTER
+Q STRING f:
+Q DELAY 200
+Q ENTER
+Q STRING g:
+Q DELAY 200
+Q ENTER
+Q STRING h:
+Q DELAY 200
+Q ENTER
+Q STRING cd payloads/switch2
+Q DELAY 200
+Q ENTER
+Q STRING start unsethc.bat
+Q DELAY 200
+Q ENTER
+Q STRING y
+Q DELAY 200
+Q ENTER
+Q STRING taskkill /F /IM cmd.exe
+Q DELAY 200
+Q ENTER
+sync
+LED G
